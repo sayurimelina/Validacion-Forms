@@ -1,4 +1,4 @@
-<h2> 01 Validaciones con HTML </h2>
+01 Validaciones con HTML
 
 Validación con los atributos required y type.
 Utilizar reglas del regex dentro del atributo pattern para validar el campo de contraseña.
