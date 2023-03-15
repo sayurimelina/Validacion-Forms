@@ -4,6 +4,7 @@ Validación con los atributos required y type.
 Utilizar reglas del regex dentro del atributo pattern para validar el campo de contraseña.
 Mandar un mensaje customizado de error en el navegador.
 
+02 VALIDACION DE Contraseñas
 
 regex password
 
@@ -14,3 +15,8 @@ regex password
 . no salto de linea
 * al menos una vez
 .{6,12} de entre a 6-2 carcteres
+
+03 VALIDACION DE FECHAS
+
+element.setCustomValidity(mensaje)
+element.dataset.dataAttributeName
