@@ -1,9 +1,56 @@
-//tomar el data attribute
+//tomar el data attribute y agregar la clase css para cambiar color 
 export function valida(input) {
     const tipoDeInput = input.dataset.tipo;
     if (validadores[tipoDeInput]) {            //si dentro de validadores existe [este tipo de input]
         validadores[tipoDeInput](input);      //este input esta vinculado con app.js
     }
+    //cambio de color
+    if (input.validity.valid){
+        input.parentElement.classList.remove('input-container--invalid');
+        input.parentElement.querySelector('.input-message-error').innerHTML = ''
+    } else {
+        input.parentElement.classList.add('input-container--invalid');
+        input.parentElement.querySelector('.input-message-error').innerHTML = mostrarMensajeDeError(tipoDeInput, input)
+    }
+}
+//array para encontrar el tipo en mensajes de error
+const tipoDeErrores = [
+    'valueMissing',
+    'typeMismatch',
+    'patternMismatch',
+    'customError',
+]
+
+//diccionario 
+const mensajesDeError = {
+    nombre: {
+        valueMissing: ' Este campo nombre no puede estar vacio'
+    },
+    email: {
+        valueMissing: ' Este campo correo no puede estar vacio',
+        typeMismatch: 'Este correo no es valido'
+    },
+    password: {
+        valueMissing:' Este campo contrasena no puede estar vacio',
+        patternMismatch: 'De entre 6 - 12 caracteres.Al menos una letra mayuscula, minuscula, un numero y sin caracteres especiales'
+    },
+    nacimiento: {
+        valueMissing:' Este campo fecha de nacimiento no puede estar vacio',
+        customError: 'Debes tener al menos 18 años de edad'
+    }
+}
+
+function mostrarMensajeDeError(tipoDeInput, input) {
+    let mensaje = '';
+    tipoDeErrores.forEach( error => {
+        if(input.validity[error]){
+            console.log(tipoDeInput, error);
+            console.log(input.validity[error]);
+            console.log(mensajesDeError[tipoDeInput][error]);
+            mensaje = mensajesDeError[tipoDeInput][error]
+        }
+    })
+    return mensaje;
 }
 
 //nombres del data attribute

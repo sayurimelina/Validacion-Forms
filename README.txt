@@ -1,3 +1,6 @@
+github proyecto Base
+https://github.com/alura-es-cursos/1842-html-validaciones/tree/proyecto_inicial
+
 01 Validaciones con HTML
 
 Validación con los atributos required y type.
@@ -20,3 +23,16 @@ regex password
 
 element.setCustomValidity(mensaje)
 element.dataset.dataAttributeName
+
+04
+
+$0 validity  //revisa la validity de un elemento en el cual se encuentra ' valid: true '
+Como enseñar el mensaje de error directamente en el HTML.
+Como customizar los mensajes de error de validación.
+
+*motivaciones para no utilizar el mensaje padrón del navegador:
+cambia dependiendo del navegador
+el idioma puede variar
+el estilo es estatico
+
+05
