@@ -35,7 +35,7 @@ cambia dependiendo del navegador
 el idioma puede variar
 el estilo es estatico
 
-05 completando el form
+05 completando el form en [clase04]
 
 #telefonicos 
 maxlength solo para type text
