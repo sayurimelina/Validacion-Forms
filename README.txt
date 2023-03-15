@@ -24,7 +24,7 @@ regex password
 element.setCustomValidity(mensaje)
 element.dataset.dataAttributeName
 
-04
+04 mensajes customizado
 
 $0 validity  //revisa la validity de un elemento en el cual se encuentra ' valid: true '
 Como enseñar el mensaje de error directamente en el HTML.
@@ -35,4 +35,8 @@ cambia dependiendo del navegador
 el idioma puede variar
 el estilo es estatico
 
-05
+05 completando el form
+
+#telefonicos 
+maxlength solo para type text
+
